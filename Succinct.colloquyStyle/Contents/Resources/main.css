@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  /*color: #4b4b4b;*/
+  color: #4b4b4b;
   background-color: white;
 }
 
@@ -23,7 +23,6 @@ img {
 }
 
 a:link {
-  /*color: #0033cc;*/
   /* Don't let long links break the layout */
   display: inline-block;
   vertical-align: top;
