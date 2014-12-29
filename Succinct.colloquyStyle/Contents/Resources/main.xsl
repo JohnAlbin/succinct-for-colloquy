@@ -85,14 +85,43 @@
 
 					<xsl:variable name="hostmask" select="../sender/@hostmask" />
 
+				<xsl:variable name="senderNick" select="sender | ../sender"/>
+				 <xsl:variable name="senderHostmask" select="sender/@hostmask | ../sender/@hostmask"/>
+				 <xsl:variable name="senderHash"
+						select="number(
+									substring(
+										translate(
+											$senderHostmask,
+											'abcdefghijklmnopqrstuvwxyzABCDEFGHIKJLMNOPQRSTUVWXYZ-_.@~',
+											'123456789012345678901234567890123456789012345678901234567'
+										),
+										2,
+										7
+									)
+								)"
+				 />
+
+				 <xsl:variable name="senderColor">
+					<xsl:choose>
+						<xsl:when test="sender/@self = 'yes'">colorself</xsl:when>
+						<xsl:when test="../sender/@self = 'yes'">colorself</xsl:when>
+						<xsl:when test="string-length(sender/text()) &gt; 0">
+							<xsl:value-of select="concat('color', $senderHash mod 70 )" />
+						</xsl:when>
+						<xsl:when test="string-length(../sender/text()) &gt; 0">
+							<xsl:value-of select="concat('color', $senderHash mod 70)" />
+						</xsl:when>
+					</xsl:choose>
+				 </xsl:variable>
+
 					<article id="{@id}" class="{$messageClasses} table__row">
 						<p class="message__sender table__cell">
-							<a href="{$memberLink}" title="{$hostmask}" class="{$memberClasses}"><xsl:value-of select="../sender" /></a><span class="hidden">: </span>
+							<a href="{$memberLink}" title="{$hostmask}" class="{$memberClasses} {$senderColor}"><xsl:value-of select="../sender" /></a><span class="hidden">: </span>
 						</p>
 						<p class="message__content table__cell">
 							<xsl:if test="@action = 'yes'">
 								<xsl:text>• </xsl:text>
-								<a href="{$memberLink}" title="{$hostmask}" class="action {$memberClasses}">
+								<a href="{$memberLink}" title="{$hostmask}" class="action {$memberClasses} {$senderColor}">
 									<xsl:value-of select="../sender" />
 								</a>
 								<xsl:text> </xsl:text>
@@ -173,14 +202,43 @@
 
 			<xsl:variable name="hostmask" select="sender/@hostmask" />
 
+			<xsl:variable name="senderNick" select="sender | ../sender"/>
+				 <xsl:variable name="senderHostmask" select="sender/@hostmask | ../sender/@hostmask"/>
+				 <xsl:variable name="senderHash"
+						select="number(
+									substring(
+										translate(
+											$senderHostmask,
+											'abcdefghijklmnopqrstuvwxyzABCDEFGHIKJLMNOPQRSTUVWXYZ-_.@~',
+											'123456789012345678901234567890123456789012345678901234567'
+										),
+										2,
+										7
+									)
+								)"
+				 />
+
+				 <xsl:variable name="senderColor">
+					<xsl:choose>
+						<xsl:when test="sender/@self = 'yes'">colorself</xsl:when>
+						<xsl:when test="../sender/@self = 'yes'">colorself</xsl:when>
+						<xsl:when test="string-length(sender/text()) &gt; 0">
+							<xsl:value-of select="concat('color', $senderHash mod 70 )" />
+						</xsl:when>
+						<xsl:when test="string-length(../sender/text()) &gt; 0">
+							<xsl:value-of select="concat('color', $senderHash mod 70)" />
+						</xsl:when>
+					</xsl:choose>
+				 </xsl:variable>
+
 			<article id="{message[not( @ignored = 'yes' )][1]/@id}" class="{$messageClasses} table__row">
 				<p class="message__sender table__cell">
-					<a href="{$memberLink}" title="{$hostmask}" class="{$memberClasses}"><xsl:value-of select="sender" /></a><span class="hidden">: </span>
+					<a href="{$memberLink}" title="{$hostmask}" class="{$memberClasses} {$senderColor}"><xsl:value-of select="sender" /></a><span class="hidden">: </span>
 				</p>
 				<p class="message__content table__cell">
 					<xsl:if test="message[not( @ignored = 'yes' )][1]/@action = 'yes'">
 						<xsl:text>• </xsl:text>
-						<a href="{$memberLink}" title="{$hostmask}" class="action {$memberClasses}">
+						<a href="{$memberLink}" title="{$hostmask}" class="action {$memberClasses} {$senderColor}">
 							<xsl:value-of select="sender" />
 						</a>
 						<xsl:text> </xsl:text>
