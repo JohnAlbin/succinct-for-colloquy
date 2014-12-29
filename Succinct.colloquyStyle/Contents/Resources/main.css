@@ -23,7 +23,6 @@ img {
 }
 
 a:link {
-  color: #0033cc;
   /* Don't let long links break the layout */
   display: inline-block;
   vertical-align: top;
@@ -59,7 +58,6 @@ a:focus {
  * Elements
  */
 .member:link, .member:visited {
-  color: #4b4b4b;
   text-decoration: none;
 }
 .member:hover, .member:focus {
@@ -268,3 +266,83 @@ a:focus {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
+/* Nick Colours */
+
+.colorself, .colorself a {
+    color: #A90101;
+	font-weight: bold;    
+}
+
+.color0, .color0  > * { color: #213240; }
+.color1, .color1  > * { color: #EC1559; }
+.color2, .color2  > * { color: #FAF93C; }
+.color3, .color3  > * { color: #561420; }
+.color4, .color4  > * { color: #821122; }
+.color5, .color5  > * { color: #333333; }
+.color6, .color6  > * { color: #D31D8C; }
+.color7, .color7  > * { color: #BCDD11; }
+.color8, .color8  > * { color: #005381; }
+.color9, .color9  > * { color: #0D813D; }
+.color10, .color10   > * { color: #F7A700; }
+.color11, .color11   > * { color: #3F3F30; }
+.color12, .color12   > * { color: #330000; }
+.color13, .color13   > * { color: #670000; }
+.color14, .color14   > * { color: #A31B00; }
+.color15, .color15   > * { color: #C24400; }
+.color16, .color16   > * { color: #DD6100; }
+.color17, .color17   > * { color: #4B4C3C; }
+.color18, .color18   > * { color: #57470C; }
+.color19, .color19   > * { color: #2B6088; }
+.color20, .color20   > * { color: #0A55A3; }
+.color21, .color21   > * { color: #006EBA; }
+.color22, .color22   > * { color: #8D1C0C; }
+.color23, .color23   > * { color: #FD1B15; }
+.color24, .color24   > * { color: #FF6D06; }
+.color25, .color25   > * { color: #3EA63B; }
+.color26, .color26   > * { color: #4F4F4F; }
+.color27, .color27   > * { color: #96D377; }
+.color28, .color28   > * { color: #7BF53D; }
+.color29, .color29   > * { color: #991D5E; }
+.color30, .color30   > * { color: #C42616; }
+.color31, .color31   > * { color: #5050C1; }
+.color32, .color32   > * { color: #5088C1; }
+.color33, .color33   > * { color: #561420; }
+.color34, .color34   > * { color: #821122; }
+.color35, .color35   > * { color: #333333; }
+.color36, .color36   > * { color: #EC1559; }
+.color37, .color37   > * { color: #213240; }
+.color38, .color38   > * { color: #193D55; }
+.color39, .color39   > * { color: #0D813D; }
+.color40, .color40   > * { color: #193D55; }
+.color41, .color41   > * { color: #C0000B; }
+.color42, .color42   > * { color: #FF6800; }
+.color43, .color43   > * { color: #662B2D; }
+.color44, .color44   > * { color: #B03C0D; }
+.color45, .color45   > * { color: #E7371A; }
+.color46, .color46   > * { color: #EAB239; }
+.color47, .color47   > * { color: #193D55; }
+.color48, .color48   > * { color: #4D7086; }
+.color49, .color49   > * { color: #2B877E; }
+.color50, .color50   > * { color: #8A8C81; }
+.color51, .color51   > * { color: #5F8183; }
+.color52, .color52   > * { color: #C6064F; }
+.color53, .color53   > * { color: #F93981; }
+.color54, .color54   > * { color: #E7C51B; }
+.color55, .color55   > * { color: #8173B1; }
+.color56, .color56   > * { color: #000014; }
+.color57, .color57   > * { color: #2A3B63; }
+.color58, .color58   > * { color: #717C8C; }
+.color59, .color59   > * { color: #F56203; }
+.color60, .color60   > * { color: #FF0000; }
+.color61, .color61   > * { color: #D24B00; }
+.color62, .color62   > * { color: #90620C; }
+.color63, .color63   > * { color: #225928; }
+.color64, .color64   > * { color: #3D367D; }
+.color65, .color65   > * { color: #5D236E; }
+.color66, .color66   > * { color: #D12C8B; }
+.color67, .color67   > * { color: #991441; }
+.color68, .color68   > * { color: #585858; }
+.color69, .color69   > * { color: #678090; }
+.color70, .color70   > * { color: #6F9DBE; }
+ > * 
